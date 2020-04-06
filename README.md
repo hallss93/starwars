@@ -1,5 +1,7 @@
 # Star Wars
 
+Live Demo [here](https://5e8b8ad02937e401a3eeab4e--goofy-franklin-196461.netlify.com/)
+
 A challenge project using `React` and `Redux`.
 ## Installation
 

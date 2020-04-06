@@ -58,7 +58,7 @@ export default function Card(course) {
                                 <h6>Gender: <strong>{course.gender}</strong></h6>
                                 <h6>Mass: <strong>{course.mass}</strong></h6>
                                 <h6>Height: <strong>{course.height}</strong></h6>
-                                {course.starships_list.length > 0 ? <h6>StarShips:</h6> : null}
+                                {course.starships_list.length > 0 ? <h6>StarShips ({course.starships_list.length}):</h6> : null}
                                 <div className="star-power">
                                     {course.starships_list.map((e) => {
                                         return <span
