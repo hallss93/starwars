@@ -1,0 +1,522 @@
+.starwars-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 6% 0px 6%;
+}
+.starwars-container .starwars-card {
+  min-height: 450px;
+  position: relative;
+  width: 33%;
+  transition: all 0.5s;
+}
+.starwars-container .starwars-card:not(.is-flipped):hover {
+  transform: translate(0px, -5px);
+}
+.starwars-container .starwars-card .star-body {
+  transition: box-shadow 0.5s;
+  background: linear-gradient(
+    300deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(235, 235, 235, 1) 35%,
+    rgba(227, 226, 227, 1) 100%
+  );
+  margin: 4px;
+  box-shadow: 1px 1px 5px #ddd;
+  border: 1px solid rgba(227, 226, 227, 1);
+  border-radius: 4px;
+}
+.starwars-container .starwars-card .star-body:hover {
+  background: linear-gradient(
+    300deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(235, 235, 235, 1) 35%,
+    rgba(251, 251, 251, 1) 100%
+  );
+  box-shadow: 5px 5px 5px #ddd;
+}
+.starwars-container .starwars-card .star-body .people {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  min-height: 200px;
+}
+.starwars-container .starwars-card .star-body .people img {
+  width: 50%;
+  height: 50%;
+}
+.starwars-container .starwars-card .star-body .card-body {
+  background: #e3e2e3;
+}
+.starwars-container .starwars-card .star-body .span-title {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin: 15px;
+}
+.starwars-container .starwars-card .star-body .span-title .span-body {
+  background: #fff 99;
+  border: 1px solid #3e3c3c 2b;
+  height: 45px;
+  padding: 8px;
+  width: 40%;
+}
+.starwars-container .starwars-card .star-body .span-title .span-body h6.title {
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  color: #9a9a9a;
+}
+.starwars-container .starwars-card .star-body .span-title .span-body h4.value {
+  text-transform: uppercase;
+  margin-top: 7px;
+  color: #314254;
+  font-size: 20px;
+}
+.starwars-container .starwars-card .star-body .attack-title {
+  margin: 15px 15px 10px 15px;
+  text-align: left;
+  color: #314254;
+}
+
+/* This Tab component has been modified from an existing component: https://tympanus.net/Development/TabStylesInspiration/ */
+.star-body:hover svg:nth-child(2) {
+  background: linear-gradient(
+    0deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(235, 235, 235, 1) 35%,
+    rgba(251, 251, 251, 1) 100%
+  );
+}
+.star-body:hover span:nth-child(2) {
+  background: linear-gradient(
+    0deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(235, 235, 235, 1) 35%,
+    rgba(251, 251, 251, 1) 100%
+  );
+}
+.star-body .tabs-style-shape {
+  max-width: 1200px;
+}
+.star-body .tabs-style-shape nav ul li {
+  margin: 0 3em;
+}
+.star-body .tabs-style-shape nav ul li:first-child {
+  margin-left: 0;
+}
+.star-body .tabs-style-shape nav ul li.tab-current {
+  z-index: 100;
+}
+.star-body .tabs-style-shape nav ul li a {
+  overflow: visible;
+  margin: 0 -3em 0 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 500;
+}
+.star-body .tabs-style-shape nav ul li a svg {
+  pointer-events: none !important;
+  position: absolute;
+  left: 100%;
+  margin: 0;
+  width: 3em;
+  height: 100%;
+  fill: #efefef;
+}
+.star-body .tabs-style-shape nav ul li a svg:nth-child(2) {
+  right: 100%;
+  left: auto;
+  -webkit-transform: scale3d(-1, 1, 1);
+  transform: scale3d(-1, 1, 1);
+  background-color: #e6e5e6;
+}
+.star-body .tabs-style-shape nav ul li a svg use {
+  pointer-events: auto;
+}
+.star-body .tabs-style-shape nav ul li a span {
+  display: block;
+  overflow: hidden;
+  padding: 0.65em 0;
+  background-color: #efefef;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.star-body .tabs-style-shape nav ul li a span:nth-child(2) {
+  background-color: #e6e5e6;
+}
+.star-body .tabs-style-shape nav ul li:first-child a span {
+  padding-left: 2em;
+  border-radius: 30px 0 0 0;
+}
+.star-body .tabs-style-shape nav ul li:last-child a span {
+  padding-right: 2em;
+  border-radius: 0 30px 0 0;
+}
+.star-body .tabs-style-shape nav ul li:last-child a svg {
+  right: 100%;
+  left: auto;
+  -webkit-transform: scale3d(-1, 1, 1);
+  transform: scale3d(-1, 1, 1);
+}
+.star-body .tabs-style-shape nav li.tab-current a span,
+.star-body .tabs-style-shape nav li.tab-current a svg {
+  -webkit-transition: none;
+  transition: none;
+}
+.star-body .tabs-style-shape nav li a span {
+  min-height: 60px;
+}
+.star-body .tabs-style-shape nav li.tab-current a span {
+  background: #fff;
+}
+.star-body .tabs-style-shape nav li.tab-current a svg {
+  fill: #fff;
+}
+.star-body .tabs-style-shape .content-wrap {
+  background: #fff;
+}
+.star-body .content-wrap {
+  height: 180px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 58em) {
+  .star-body .tabs-style-shape nav ul {
+    display: block;
+    padding-top: 1.5em;
+  }
+  .star-body .tabs-style-shape nav ul li {
+    display: block;
+    margin: -1.25em 0 0;
+    -webkit-flex: none;
+    flex: none;
+  }
+  .star-body .tabs-style-shape nav ul li a {
+    margin: 0;
+  }
+  .star-body .tabs-style-shape nav ul li svg {
+    display: none;
+  }
+  .star-body .tabs-style-shape nav ul li a span {
+    padding: 1.25em 0 2em !important;
+    border-radius: 30px 30px 0 0 !important;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1;
+  }
+  .star-body .tabs-style-shape nav ul li:last-child a span {
+    padding: 1.25em 0 !important;
+  }
+  .star-body .tabs-style-shape nav ul li.tab-current {
+    z-index: 1;
+  }
+}
+.star-body .tabs {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+.star-body .tabs nav {
+  text-align: center;
+}
+.star-body .tabs nav ul {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  margin-left: -23px;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+.star-body .tabs nav ul li {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.star-body .tabs nav ul li.tab-current a {
+  color: #74777b;
+}
+.star-body .tabs nav a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2.5;
+}
+.star-body .tabs nav a span {
+  vertical-align: middle;
+  font-size: 0.75em;
+}
+.star-body .tabs nav:focus {
+  outline: none;
+}
+.star-body .content-wrap {
+  position: relative;
+}
+.star-body .content-wrap section {
+  display: none;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 1200px;
+  text-align: left;
+}
+.star-body .content-wrap section.content-current {
+  display: block;
+}
+@media screen and (max-width: 58em) {
+  .star-body .tabs nav a:before {
+    margin-right: 0;
+  }
+}
+.star-body nav,
+.star-body section {
+  display: block;
+}
+.star-body html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.star-body body {
+  margin: 0;
+}
+.star-body a:focus {
+  outline: thin dotted;
+}
+.star-body a:active,
+.star-body a:hover {
+  outline: 0;
+}
+.star-body svg:not(:root) {
+  overflow: hidden;
+}
+.star-body *,
+.star-body *:after,
+.star-body *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.star-body body {
+  background: white;
+  color: #74777b;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: "Raleway", Arial, sans-serif;
+}
+.star-body a {
+  color: #2cc185;
+  text-decoration: none;
+  outline: none;
+}
+.star-body a:hover,
+.star-body a:focus {
+  color: #74777b;
+}
+.star-body h4 {
+  margin: 0px;
+}
+.star-body .star-power {
+  display: grid;
+}
+.star-body .star-power span {
+  margin: 3px;
+  padding: 3px 8px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+.star-body .star-power span.Grass {
+  background: #9bcb50;
+  color: black;
+}
+.star-body .star-power span.Poison {
+  background: #b97ec8;
+  color: white;
+}
+.star-body .star-power span.Water {
+  background: #7095c2;
+  color: white;
+}
+.star-body .star-power span.Steel {
+  background: #4d535d;
+  color: white;
+}
+.star-body .star-power span.Ice {
+  background: #a9b8d8;
+  color: black;
+}
+.star-body .star-power span.Normal {
+  background: #ffe59c;
+  color: black;
+}
+.star-body .star-power span.Fire {
+  background: #e16d39;
+  color: white;
+}
+.star-body .star-power span.Dragon {
+  background: #ec9e5d;
+  color: black;
+}
+.star-body .star-power span.Bug {
+  background: #b4c0bf;
+  color: black;
+}
+.star-body .star-power span.Flying {
+  background: #59536b;
+  color: white;
+}
+.star-body .star-power span.Ground {
+  background: #93693a;
+  color: white;
+}
+.star-body .star-power span.Dark {
+  background: #3a3533;
+  color: white;
+}
+.star-body .star-power span.Rock {
+  background: #cec8b6;
+  color: black;
+}
+.star-body .star-power span.Electric {
+  background: #cf6350;
+  color: black;
+}
+.star-body .star-power span.Fighting {
+  background: #7e7970;
+  color: white;
+}
+.star-body .star-power span.Psychic {
+  background: #5187a1;
+  color: black;
+}
+
+table {
+  width: 100%;
+}
+table th {
+  color: #314254;
+  font-weight: 600;
+}
+table td {
+  height: 25px;
+  color: #314254;
+  font-weight: 200;
+}
+table td span {
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc c;
+}
+table td span.Grass {
+  background: #9bcb50;
+  color: black;
+}
+table td span.Poison {
+  background: #b97ec8;
+  color: white;
+}
+table td span.Water {
+  background: #7095c2;
+  color: white;
+}
+table td span.Steel {
+  background: #4d535d;
+  color: white;
+}
+table td span.Ice {
+  background: #a9b8d8;
+  color: black;
+}
+table td span.Normal {
+  background: #ffe59c;
+  color: black;
+}
+table td span.Fire {
+  background: #e16d39;
+  color: white;
+}
+table td span.Dragon {
+  background: #ec9e5d;
+  color: black;
+}
+table td span.Bug {
+  background: #b4c0bf;
+  color: black;
+}
+table td span.Flying {
+  background: #59536b;
+  color: white;
+}
+table td span.Ground {
+  background: #93693a;
+  color: white;
+}
+table td span.Dark {
+  background: #3a3533;
+  color: white;
+}
+table td span.Rock {
+  background: #cec8b6;
+  color: black;
+}
+table td span.Electric {
+  background: #cf6350;
+  color: black;
+}
+table td span.Fighting {
+  background: #7e7970;
+  color: white;
+}
+table td span.Psychic {
+  background: #5187a1;
+  color: black;
+}
+
+body {
+  font-family: sans-serif;
+}
+body .starwars-card {
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+body .starwars-card.is-flipped {
+  z-index: 100;
+  transform: rotateY(180deg);
+}
+body .starwars-card .star-body {
+  width: 98%;
+  position: absolute;
+  color: #314254;
+  text-align: center;
+  font-weight: bold;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+body .starwars-card .star-body.star-body--back {
+  height: 436px;
+  z-index: 100;
+  transform: rotateY(180deg);
+}
